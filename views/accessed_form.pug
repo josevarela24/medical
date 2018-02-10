@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='record') Record:
+      select#record.form-control(type='select' placeholder='Select record' name='record' required='true')
+        for record in record_list
+          if recordinstance
+            option(value=record._id selected=(recordinstance.record.toString()==record._id.toString() ? 'selected' : false)) #{record.number}
+          else
+            option(value=record._id) #{record.number}
+        
+    div.form-group
+      label(for='condition') Condition:
+      input#condition.form-control(type='text' placeholder='Condition' name='condition' required='true' value=(undefined===recordinstance ? '' : recordinstance.condition))
+    div.form-group
+      label(for='date_accessed') Date when record accessed:
+      input#date_accessed.form-control(type='date' name='date_accessed' value=(undefined===recordinstance ? '' : recordinstance.date_accessed))
+            
+    div.form-group
+      label(for='medication') Medication:
+      select#medication.form-control(type='select' placeholder='Select medication' name='medication' required='true')
+        option(value='Codeine') Codeine
+        option(value='Percocet') Percocet
+        option(value='Vicodin') Vicodin
+        option(value='Lean') Lean
+
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

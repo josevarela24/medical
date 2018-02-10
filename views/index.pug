@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to your #[em Medical Record System]
+
+  if error
+    p Error getting dynamic content.
+  else
+    p The database has the following record counts:
+
+    ul
+      li #[strong Records:] !{data.record_count}
+      li #[strong Accesses:] !{data.accessed_count}
+      //li #[strong Accesses available:] !{data.accessed_available_count} 
+      li #[strong Patients:] !{data.patient_count}
+      li #[strong Clinicians:] !{data.clinician_count}

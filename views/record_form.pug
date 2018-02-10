@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='number') Number:
+      input#number.form-control(type='text', placeholder='Number of record' name='number' required='true' value=(undefined===record ? '' : record.number) )
+    div.form-group
+      label(for='patient') Patient:
+      select#patient.form-control(type='select' placeholder='Select Patient' name='patient' required='true' )
+        for patient in patients
+          if record
+            //- Handle GET form, where record.patient is an object, and POST form, where it is a string.
+            option(
+              value=patient._id
+              selected=(
+                patient._id.toString()==record.patient._id
+                || patient._id.toString()==record.patient
+              ) ? 'selected' : false
+            ) #{patient.name}
+          else
+            option(value=patient._id) #{patient.name}
+    div.form-group
+      label(for='provider') Provider:
+      input#provider.form-control(type='textarea', placeholder='provider' name='provider' value=(undefined===record ? '' : record.provider) required='true')
+    div.form-group
+      label(for='id') Provider ID:
+      input#id.form-control(type='text', placeholder='HO39493' name='id' value=(undefined===record ? '' : record.id) required='true') 
+    div.form-group
+      label Clinician:
+      div
+        for clinician in clinicians
+          div(style='display: inline; padding-right:10px;')
+            input.checkbox-input(type='checkbox', name='clinician', id=clinician._id, value=clinician._id, checked=clinician.checked )
+            label(for=clinician._id) #{clinician.name}
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

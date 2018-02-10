@@ -1,0 +1,67 @@
+body{color: white; font-family: 'Raleway', sans-serif;}
+.container-fluid{width: 100%;}
+.top {
+  height: 60px; 
+  content:url("../images/logo.png");
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: auto;
+  left: 0;
+}
+
+.colorstrip{height: 70px; background-color: #046791;
+  border-bottom: solid 7px #035c82; width: 100%;}
+
+.image {
+  background-image: url("../images/outdoor.jpg");
+  background-position: left 60%;
+  height: 400px;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 2%;
+  list-style: none;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 17px;
+}
+
+a { color:white; text-decoration: none;}
+a:hover {color: white; text-decoration: none;}
+
+.two{
+  background-color: #17415f;
+  color: inherit;
+}
+
+.col-sm-5 {
+  background-color: #0d76ad;
+  padding-left: 5%;
+  padding-top: 30px;
+}
+
+.col-sm-5 a{font-size: 17px;}
+.col-sm-5 p{font-size: 17px;}
+dd{font-size: 15px;}
+
+.row {
+  min-height: 900px;
+  background-color: #04689b;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: solid 60px white;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  height: 70px;
+}
+
+li {list-style-type: none;}

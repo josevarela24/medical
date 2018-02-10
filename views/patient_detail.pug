@@ -1,0 +1,26 @@
+extends layout
+
+block content
+
+  h1 Patient: #{patient.name}
+  p #{patient.lifespan}
+  
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Record
+    
+    dl
+    each record in patient_records
+      dt 
+        a(href=record.url) Record ID: #{record.number}
+      dd Healthcare Provider: #{record.provider}
+      br
+
+    else
+      p This patient has no records.
+
+  hr
+  p
+    a(href=patient.url+'/delete') Delete patient
+  p
+    a(href=patient.url+'/update') Update patient

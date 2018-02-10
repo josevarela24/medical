@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  
+  ul
+  each clinician in clinician_list
+    li 
+      img.avatar(src="/images/doctor.png" alt="Doctor Avatar")
+      a(href=clinician.url) #{clinician.name} 
+
+  else
+    li There are no clinicians.

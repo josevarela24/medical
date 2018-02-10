@@ -1,0 +1,33 @@
+extends layout
+
+block content
+
+  h1= title
+  
+  p #[strong Do you really want to delete this accessed?]
+  
+  div(style="margin-left:20px")
+
+    p #[strong ID]: #{accessed._id}
+  
+    p #[strong Number:] 
+      a(href=accessed.record.url) #{accessed.record.number}
+    
+    p #[strong Condition:] #{accessed.condition}
+
+    p #[strong Medication:] 
+      if accessed.medication=='Codeine'
+        span.text-success #{accessed.medication}
+      else if accessed.medication=='Percocet'
+        span.text-danger #{accessed.medication}
+      else
+        span.text-warning #{accessed.medication} 
+      
+    if accessed.medication!='Codeine'
+      p #[strong Due back:] #{accessed.date_accessed_formatted}
+
+  form(method='POST' action='')
+    div.form-group
+      input#id.form-control(type='hidden',name='id', required='true', value=accessed._id )
+
+    button.btn.btn-primary(type='submit') Delete

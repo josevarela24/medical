@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1 #{title}: #{record.number}
+  
+  p #[strong Patient:] 
+    a(href=record.patient.url) #{record.patient.name}
+  p #[strong Provider:] #{record.provider}
+  p #[strong Provider ID:] #{record.id}
+  p #[strong Clinician:]&nbsp;
+    each val in record.clinician
+      a(href=val.url) #{val.name}
+      |, 
+  
+  div(style='margin-left:20px;margin-top:20px')
+    h4 Copies
+    
+    each val in accesses
+      hr
+      if val.medication=='Codeine'
+        p.text-success #{val.medication}
+      else if val.medication=='Percocet'
+        p.text-danger #{val.medication}
+      else
+        p.text-warning #{val.medication} 
+      p #[strong Condition:] #{val.condition}
+      if val.medication!='Codeine'
+        p #[strong Date Accessed:] #{val.date_accessed}
+      p #[strong Id:]&nbsp;
+        a(href=val.url) #{val._id}
+ 
+    else
+      p There are no copies of this record in the database.
+  
+  hr
+  p
+    a(href=record.url+'/delete') Delete record
+  p
+    a(href=record.url+'/update') Update record

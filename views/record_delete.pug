@@ -1,0 +1,47 @@
+extends layout
+
+block content
+
+  h1 #{title}: #{record.number}
+  
+  p #[strong Patient:] 
+    a(href=record.patient.url) #{record.patient.name}
+  p #[strong Provider:] #{record.provider}
+  p #[strong Provider ID:] #{record.id}
+  p #[strong Clinician:] 
+    each val in record.clinician
+      a(href=val.url) #{val.name}
+      |, 
+
+  hr
+  
+  if accessed.length
+  
+    p #[strong Delete the following copies before attempting to delete this record.]
+  
+    div(style='margin-left:20px;margin-top:20px')
+
+      h4 Copies
+    
+        each record_copy in accesses
+          hr
+          if record_copy.medication=='Codeine'
+            p.text-success #{record_copy.medication}
+          else if record_copy.medication=='Percocet'
+            p.text-danger #{record_copy.medication}
+          else
+            p.text-warning #{record_copy.medication} 
+          p #[strong Condition:] #{record_copy.condition}
+          if record_copy.medication!='Codeine'
+            p #[strong Date Accessed:] #{record_copy.date_accessed}
+          p #[strong Id:] 
+            a(href=record_copy.url) #{record_copy._id}
+
+  else
+    p Do you really want to delete this record?
+    
+    form(method='POST' action='')
+      div.form-group
+        input#id.form-control(type='hidden',name='id', required='true', value=record._id )
+
+      button.btn.btn-primary(type='submit') Delete

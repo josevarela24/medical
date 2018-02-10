@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+  each val in accessed_list
+    li 
+      img.avatar(src="/images/glass.png" alt="Access")
+      a(href=val.url) #{val.record.number} : #{val.condition} - 
+      if val.medication=='Codeine'
+        span.text-success #{val.status}
+      else if val.status=='Percocet'
+        span.text-danger #{val.status}
+      else
+        span.text-warning #{val.status} 
+      if val.status!='Codeine'
+        span  (Accessed: #{val.date_accessed_formatted} )
+
+  else
+    li There are no record accesses in this database.

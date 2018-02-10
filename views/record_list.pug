@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  
+  ul
+  each record in record_list
+    li 
+      img.avatar(src="/images/record.png" alt="Record")
+      a(href=record.url) Record: #{record.number} 
+      |  (#{record.patient.name})
+
+  else
+    li There are no records.

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  h1 Clinician: #{clinician.name}
+  
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Records
+    
+    dl
+    each record in clinician_records
+      dt 
+        a(href=record.url) #{record.number}
+      dd #{record.provider}
+      br
+
+    else
+      p This clinician has no records.
+      
+  hr
+  p
+    a(href=clinician.url+'/delete') Delete clinician
+  p
+    a(href=clinician.url+'/update') Update clinician

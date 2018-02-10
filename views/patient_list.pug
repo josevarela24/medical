@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  
+  ul
+  each patient in patient_list
+    li 
+      img.avatar(src="/images/patient.png" alt="Patient Avatar")
+      a(href=patient.url) #{patient.name} 
+      | (#{patient.lifespan})
+
+  else
+    li There are no patients.
