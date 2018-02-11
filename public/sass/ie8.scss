@@ -1,28 +1,31 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import 'libs/skel';
 
 /*
-	Stellar by HTML5 UP
+	Arcana by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Type */
+/* Form */
 
-	body {
-		color: _palette(fg-bold);
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
-/* Button */
+/* Image */
 
-	.button {
-		position: relative;
-		border: solid 1px !important;
+	.image {
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 
-		&.special {
-			border: none !important;
+		img {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
 		}
 	}
 
@@ -30,54 +33,47 @@
 
 	.icon {
 		&.major {
-			-ms-behavior: url('assets/js/ie/PIE.htc');
-
-			&:before {
-				font-size: 4em;
-				border: 0;
-			}
-		}
-	}
-
-/* Spotlight */
-
-	.spotlight {
-		.image {
 			position: relative;
 			-ms-behavior: url('assets/js/ie/PIE.htc');
+		}
+	}
 
-			img {
-				position: relative;
-				-ms-behavior: url('assets/js/ie/PIE.htc');
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+	}
+
+/* Box */
+
+	.box {
+		&.post {
+			.inner {
+				margin-left: 35%;
 			}
 		}
 	}
 
-/* Features */
+/* Dropotron */
 
-	.features {
-		li {
-			width: 29%;
-		}
+	.dropotron {
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
-/* Footer */
+/* Banner */
 
-	#footer {
-		> * {
-			width: 50%;
-			margin-left: 0;
-		}
+	#banner {
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
 	}
 
-/* Main */
+/* Wrapper */
 
-	#main {
-		> .main {
-			> .image.main:first-child {
-				margin-top: 0;
-				margin-left: 0;
-				width: 100%;
-			}
+	.wrapper {
+		&.style2 {
+			background: #fdfdfd url('images/bg01.png');
 		}
 	}

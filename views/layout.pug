@@ -1,45 +1,282 @@
+//- doctype html
+//- html(lang='en')
+//-   head
+//-     title= title
+//-     meta(charset='utf-8')
+//-     meta(name='viewport', content='width=device-width, initial-scale=1')
+//-     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+//-     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+//-     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+//-     link(rel='stylesheet', href='/stylesheets/style.css')
+//-     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+//-   body
+//-     div(class='container top')
+//-     div(class='colorstrip')
+//-     div(class='image')
+    
+//-     div(class='container-fluid')
+//-       div(class='row')
+//-         div(class='col-sm-2')
+//-         div(class='col-sm-2 two')
+//-           block sidebar
+//-             ul(class='sidebar-nav')
+//-               li 
+//-                 a(href='/catalog') Home
+//-               li 
+//-                 a(href='/catalog/records') All records
+//-               li 
+//-                 a(href='/catalog/patients') All patients
+//-               li 
+//-                 a(href='/catalog/clinicians') All clinicians
+//-               li 
+//-                 a(href='/catalog/accesses') All accesses
+//-               li 
+//-                 hr
+//-               li 
+//-                 a(href='/catalog/patient/create') Create new patient
+//-               li 
+//-                 a(href='/catalog/clinician/create') Create new clinician
+//-               li 
+//-                 a(href='/catalog/record/create') Create new record
+//-               li 
+//-                 a(href='/catalog/accessed/create') Create new access (copy)
+                
+//-         div(class='col-sm-5')
+//-           block content
+
 doctype html
-html(lang='en')
+//
+  Arcana by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+html
   head
-    title= title
+    title Left Sidebar - Arcana by HTML5 UP
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+    //if lte IE 8
+      script(src='/javascripts/ie/html5shiv.js')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    //if lte IE 8
+      link(rel='stylesheet', href='/stylesheets/ie8.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='/stylesheets/ie9.css')
   body
-    div(class='container top')
-    div(class='colorstrip')
-    div(class='image')
-    
-    div(class='container-fluid')
-      div(class='row')
-        div(class='col-sm-2')
-        div(class='col-sm-2 two')
-          block sidebar
-            ul(class='sidebar-nav')
-              li 
-                a(href='/catalog') Home
-              li 
-                a(href='/catalog/records') All records
-              li 
-                a(href='/catalog/patients') All patients
-              li 
-                a(href='/catalog/clinicians') All clinicians
-              li 
-                a(href='/catalog/accesses') All accesses
-              li 
-                hr
-              li 
-                a(href='/catalog/patient/create') Create new patient
-              li 
-                a(href='/catalog/clinician/create') Create new clinician
-              li 
-                a(href='/catalog/record/create') Create new record
-              li 
-                a(href='/catalog/accessed/create') Create new access (copy)
-                
-        div(class='col-sm-5')
-          block content
+    #page-wrapper
+      // Header
+      #header
+        // Logo
+        h1
+          a#logo(href='index.html')
+            | Arcana 
+            em by HTML5 UP
+        // Nav
+        nav#nav
+          ul
+            li
+              a(href='index.html') Home
+            li
+              a(href='#') Dropdown
+              ul
+                li
+                  a(href='#') Lorem dolor
+                li
+                  a(href='#') Magna phasellus
+                li
+                  a(href='#') Etiam sed tempus
+                li
+                  a(href='#') Submenu
+                  ul
+                    li
+                      a(href='#') Lorem dolor
+                    li
+                      a(href='#') Phasellus magna
+                    li
+                      a(href='#') Magna phasellus
+                    li
+                      a(href='#') Etiam nisl
+                    li
+                      a(href='#') Veroeros feugiat
+                li
+                  a(href='#') Veroeros feugiat
+            li.current
+              a(href='left-sidebar.html') Left Sidebar
+            li
+              a(href='right-sidebar.html') Right Sidebar
+            li
+              a(href='two-sidebar.html') Two Sidebar
+            li
+              a(href='no-sidebar.html') No Sidebar
+      // Main
+      section.wrapper.style1
+        .container
+          .row(class='200%')
+            //.4u(class='12u(narrower)')
+            div(class='4u 12u(narrower)')
+              #sidebar
+                // Sidebar
+                section
+                  h3 Just a Subheading
+                  ul
+                    li 
+                      a(href='/catalog') Home
+                    li 
+                      a(href='/catalog/records') All records
+                    li 
+                      a(href='/catalog/patients') All patients
+                    li 
+                      a(href='/catalog/clinicians') All clinicians
+                    li 
+                      a(href='/catalog/accesses') All accesses
+                    li 
+                      hr
+                    li 
+                      a(href='/catalog/patient/create') Create new patient
+                    li 
+                      a(href='/catalog/clinician/create') Create new clinician
+                    li 
+                      a(href='/catalog/record/create') Create new record
+                    li 
+                      a(href='/catalog/accessed/create') Create new access (copy)
+                  //- p
+                  //-   | Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
+                  //-   | Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
+                  //-   | Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.
+                  //- footer
+                  //-   a.button(href='#') Continue Reading
+                section
+                  h3 Another Subheading
+                  ul.links
+                    li
+                      a(href='#') Amet turpis, feugiat et sit amet
+                    li
+                      a(href='#') Ornare in hendrerit in lectus
+                    li
+                      a(href='#') Semper mod quis eget mi dolore
+                    li
+                      a(href='#') Consequat etiam lorem phasellus
+                    li
+                      a(href='#') Amet turpis, feugiat et sit amet
+                    li
+                      a(href='#') Semper mod quisturpis nisi
+                  footer
+                    a.button(href='#') More Random Links
+            //.8u(class='12u(narrower) important(narrower)')
+            div(class='8u 12u(narrower) important(narrower')
+              #content
+                // Content
+                article
+                  header
+                    h2 Left Sidebar
+                    p Sidebar on the left, content on the right.
+                  span.image.featured
+                    img(src='/images/banner.jpeg', alt='')
+                  p
+                    | Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
+                    | Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
+                    | Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
+                    | consequat etiam lorem ipsum dolor sit amet nullam.
+                  h3 And Yet Another Subheading
+                    block content
+                  //- p
+                  //-   | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
+                  //-   | justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
+                  //-   | ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
+                  //-   | vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
+                  //-   | Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
+                  //-   | rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
+                  //-   | Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
+                  //-   | Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.
+                  //- p
+                  //-   | Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
+                  //-   | quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
+                  //-   | Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
+                  //-   | fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
+                  //-   | Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
+                  //-   | Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.
+      // Footer
+      #footer
+        .container
+          .row
+            section(class='3u 6u(narrower) 12u$(mobilep)')
+              h3 Links to Stuff
+              ul.links
+                li
+                  a(href='#') Mattis et quis rutrum
+                li
+                  a(href='#') Suspendisse amet varius
+                li
+                  a(href='#') Sed et dapibus quis
+                li
+                  a(href='#') Rutrum accumsan dolor
+                li
+                  a(href='#') Mattis rutrum accumsan
+                li
+                  a(href='#') Suspendisse varius nibh
+                li
+                  a(href='#') Sed et dapibus mattis
+            section(class='3u 6u$(narrower) 12u$(mobilep)')
+              h3 More Links to Stuff
+              ul.links
+                li
+                  a(href='#') Duis neque nisi dapibus
+                li
+                  a(href='#') Sed et dapibus quis
+                li
+                  a(href='#') Rutrum accumsan sed
+                li
+                  a(href='#') Mattis et sed accumsan
+                li
+                  a(href='#') Duis neque nisi sed
+                li
+                  a(href='#') Sed et dapibus quis
+                li
+                  a(href='#') Rutrum amet varius
+            section(class='6u 12u(narrower)')
+              h3 Get In Touch
+              form
+                .row(class='50%')
+                  div(class='6u 12u(mobilep)')
+                    input#name(type='text', name='name', placeholder='Name')
+                  div(class='6u 12u(mobilep)')
+                    input#email(type='email', name='email', placeholder='Email')
+                .row(class='50%')
+                  div(class='12u')
+                    textarea#message(name='message', placeholder='Message', rows='5')
+                .row(class='50%')
+                  div(class='12u')
+                    ul.actions
+                      li
+                        input.button.alt(type='submit', value='Send Message')
+        // Icons
+        ul.icons
+          li
+            a.icon.fa-twitter(href='#')
+              span.label Twitter
+          li
+            a.icon.fa-facebook(href='#')
+              span.label Facebook
+          li
+            a.icon.fa-github(href='#')
+              span.label GitHub
+          li
+            a.icon.fa-linkedin(href='#')
+              span.label LinkedIn
+          li
+            a.icon.fa-google-plus(href='#')
+              span.label Google+
+        // Copyright
+        .copyright
+          ul.menu
+            li © Untitled. All rights reserved
+            li
+              | Design: 
+              a(href='http://html5up.net') HTML5 UP
+    // Scripts
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/jquery.dropotron.min.js')
+    script(src='/javascripts/skel.min.js')
+    script(src='/javascripts/util.js')
+    //if lte IE 8
+      script(src='/javascripts/ie/respond.min.js')
+    script(src='/javascripts/main.js')
