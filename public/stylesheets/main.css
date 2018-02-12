@@ -2006,7 +2006,7 @@
 /* Image */
 
 	.avatar {
-		height: 70px;
+		height: 0px;
 	}
 
 	.image {
@@ -2479,7 +2479,7 @@
 /* Banner */
 
 	#banner {
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/home.jpeg");
 		background-position: center center;
 		background-size: cover;
 		height: 28em;

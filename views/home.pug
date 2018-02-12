@@ -1,0 +1,228 @@
+doctype html
+//
+  Arcana by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+html
+  head
+    title OneLife
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //if lte IE 8
+      script(src='/javascripts/ie/html5shiv.js')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    //if lte IE 8
+      link(rel='stylesheet', href='/stylesheets/ie8.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='/stylesheets/ie9.css')
+  body
+    #page-wrapper
+      // Header
+      #header
+        // Logo
+        h1
+          a#logo(href='/')
+            | OneLife 
+            //em by HTML5 UP
+        // Nav
+        nav#nav
+          ul
+            li.current
+              a(href='/') Home
+            li
+              a(href='#') Education
+              ul
+                li
+                  a(href='#') Our Goal
+                li
+                  a(href='#') Emergency Room Times
+                li
+                  a(href='#') CISS Model
+                li
+                  a(href='#') Submenu
+                  ul
+                    li
+                      a(href='#') Lorem dolor
+                    li
+                      a(href='#') Phasellus magna
+                    li
+                      a(href='#') Magna phasellus
+                    li
+                      a(href='#') Etiam nisl
+                    li
+                      a(href='#') Veroeros feugiat
+                li
+                  a(href='#') Security & Threats
+            li
+              a(href='/catalog/') Patient Portal
+            li
+              a(href='#') Find an ER
+            li
+              a(href='#') Two Sidebar
+            li
+              a(href='#') No Sidebar
+      // Banner
+      section#banner
+        header
+          h2
+            | OneLife: 
+            em
+              | Your one-stop, integrated, and patient-centered service
+          a.button(href='#') Learn More
+      // Highlights
+      section.wrapper.style1
+        .container
+          .row(class='200%')
+            section(class='4u 12u(narrower)')
+              .box.highlight
+                i.icon.major.fa-heartbeat
+                h3 Patient Portal
+                p
+                  | We seek to provide a secure way of observing your records, and a simple way of exchanging vital information from clinician to clinician. 
+            section(class='4u 12u(narrower)')
+              .box.highlight
+                i.icon.major.fa-ambulance
+                h3 Emergency Room Queueing
+                p
+                  | Demand for emergency care is increasing on a stressed environment. We seek to provide an efficient tool for a better overall experience. 
+            section(class='4u 12u(narrower)')
+              .box.highlight
+                i.icon.major.fa-user-md
+                h3 Information
+                p
+                  | We seek to minimize stress by providing much information on any question that you may have, and access to resources all in one spot.
+      // Gigantic Heading
+      section.wrapper.style2
+        .container
+          header.major
+            h2 State of the Art Queueing Management
+            p Reduced Wait Times with Effecient Resource Management
+      // Posts
+      section.wrapper.style1
+        .container
+          .row
+            section(class='6u 12u(narrower)')
+              .box.post
+                a.image.left(href='#')
+                  img(src='images/pic1.jpeg', alt='')
+                .inner
+                  h3 Step One
+                  p
+                    | Go to your primary health care provider if you do not already have an account.
+            section(class='6u 12u(narrower)')
+              .box.post
+                a.image.left(href='#')
+                  img(src='images/pic2.jpeg', alt='')
+                .inner
+                  h3 Step Two
+                  p
+                    | Have your provider register you for an account to gain access to all benefits.
+          .row
+            section(class='6u 12u(narrower)')
+              .box.post
+                a.image.left(href='#')
+                  img(src='images/pic3.png', alt='')
+                .inner
+                  h3 Step Three
+                  p
+                    | Fill out any additional information that may be required to gain access to our vast network.
+            section(class='6u 12u(narrower)')
+              .box.post
+                a.image.left(href='#')
+                  img(src='images/pic4.jpeg', alt='')
+                .inner
+                  h3 Step Four
+                  p
+                    | Live a life with less stress knowing you are better prepared for a health crisis.
+      // CTA
+      section#cta.wrapper.style3
+        .container
+          header
+            h2 Get Started Today!
+            a.button(href='#') Learn More
+      // Footer
+      #footer
+        .container
+          .row
+            section(class='3u 6u(narrower) 12u$(mobilep)')
+              h3 Patients & Visitors
+              ul.links
+                li
+                  a(href='#') Location
+                li
+                  a(href='#') Pricing Information
+                li
+                  a(href='#') Registration
+                li
+                  a(href='#') About Us
+                li
+                  a(href='#') Careers
+                li
+                  a(href='#') Contact
+                li
+                  a(href='#') Site Map
+            section(class='3u 6u$(narrower) 12u$(mobilep)')
+              h3 Health Info
+              ul.links
+                li
+                  a(href='#') For Physicians
+                li
+                  a(href='#') For Employees
+                li
+                  a(href='#') Careers
+                li
+                  a(href='#') Health Library
+                li
+                  a(href='#') Video Library
+                li
+                  a(href='#') Privacy Policy
+                li
+                  a(href='#') Terms & Conditions
+            section(class='6u 12u(narrower)')
+              h3 Get In Touch
+              form
+                .row(class='50%')
+                  div(class='6u 12u(mobilep)')
+                    input#name(type='text', name='name', placeholder='Name')
+                  div(class='6u 12u(mobilep)')
+                    input#email(type='email', name='email', placeholder='Email')
+                .row(class='50%')
+                  div(class='12u')
+                    textarea#message(name='message', placeholder='Message', rows='5')
+                .row(class='50%')
+                  div(class='12u')
+                    ul.actions
+                      li
+                        input.button.alt(type='submit', value='Send Message')
+        // Icons
+        ul.icons
+          li
+            a.icon.fa-twitter(href='#')
+              span.label Twitter
+          li
+            a.icon.fa-facebook(href='#')
+              span.label Facebook
+          li
+            a.icon.fa-github(href='#')
+              span.label GitHub
+          li
+            a.icon.fa-linkedin(href='#')
+              span.label LinkedIn
+          li
+            a.icon.fa-google-plus(href='#')
+              span.label Google+
+        // Copyright
+        .copyright
+          ul.menu
+            li © Untitled. All rights reserved
+            li
+              | Design: 
+              a(href='http://html5up.net') HTML5 UP
+    // Scripts
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/jquery.dropotron.min.js')
+    script(src='/javascripts/skel.min.js')
+    script(src='/javascripts/util.js')
+    //if lte IE 8
+      script(src='/javascripts/ie/respond.min.js')
+    script(src='/javascripts/main.js')

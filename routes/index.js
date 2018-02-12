@@ -6,7 +6,8 @@ var router = express.Router();
 // response
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/catalog');
+  //res.redirect('/catalog');
+  res.render('home', { title: 'Title' });
 });
 
 module.exports = router;
